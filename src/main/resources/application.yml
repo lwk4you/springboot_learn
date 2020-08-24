@@ -3,6 +3,10 @@ server:
 
 spring:
   datasource:
+    hikari:
+      connectionTimeout: 60000
+      maximumPoolSize: 50
+      max-lifetime: 500000
     db1:
       driver-class-name: com.mysql.cj.jdbc.Driver
       jdbc-url:  jdbc:mysql://106.53.64.109:3306/lwk_test1?characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true

@@ -4,6 +4,8 @@ import com.lwk4you.springboot_learn.domain.entity.test1.TestEntity;
 import com.lwk4you.springboot_learn.service.Test2Service;
 import com.lwk4you.springboot_learn.service.TestService;
 import org.junit.jupiter.api.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -15,6 +17,7 @@ class SpringbootLearnApplicationTests {
     private TestService testService;
     @Autowired
     private Test2Service test2Service;
+    private static Logger logger = LoggerFactory.getLogger(SpringbootLearnApplicationTests.class);
 
     @Test
     void testMybatisPlusDataSources() {
@@ -29,7 +32,7 @@ class SpringbootLearnApplicationTests {
         test2Entity.setName("刘伟康");
         test2Entity.setAddress("无故事王国");
         test2Service.save(test2Entity);
-        System.out.println(test2Entity.getId());
+        logger.info(test2Entity.getId()+"");
 
     }
 

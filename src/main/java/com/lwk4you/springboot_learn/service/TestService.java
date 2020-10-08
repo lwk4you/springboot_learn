@@ -4,4 +4,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.lwk4you.springboot_learn.domain.entity.test1.TestEntity;
 
 public interface TestService extends IService<TestEntity> {
+    TestEntity getTestById(Integer id);
+
+    TestEntity getTestById2(Integer id);
 }

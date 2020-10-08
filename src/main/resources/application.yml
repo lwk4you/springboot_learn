@@ -11,7 +11,7 @@ spring:
       driver-class-name: com.mysql.cj.jdbc.Driver
       jdbc-url:  jdbc:mysql://106.53.64.109:3306/lwk_test1?characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
       username: root
-      password: 123456
+      password: lwk123456
       connectionTimeout: 60000
       initialSize: 20
       minIdle: 5
@@ -20,11 +20,15 @@ spring:
       driver-class-name: com.mysql.cj.jdbc.Driver
       jdbc-url:  jdbc:mysql://106.53.64.109:3306/lwk_test2?characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
       username: root
-      password: 123456
+      password: lwk123456
       connectionTimeout: 60000
       initialSize: 20
       minIdle: 5
       maxActive: 200
+  redis:
+    host: 106.53.64.109
+    port: 6379
+    password: "0109080419940211"
 
 # mybatis-plus相关配置
 mybatis-plus:
@@ -43,3 +47,8 @@ mybatis-plus:
     call-setters-on-nulls: true
     # 这个配置会将执行的sql打印出来，在开发或测试的时候可以用
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+logging:
+  level:
+    root: info
